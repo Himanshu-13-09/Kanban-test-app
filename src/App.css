@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Inter', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.boardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: #FFFFFF;
+  padding-left: 150px;
+  padding-right: 150px;
+  min-height: 50vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.listContainer {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  padding: 0;
+  width: 100%;
+  margin: 10px;
+  min-height: 80vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardContainer {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px;
+  margin:10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-height: 100px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+}
+
+.description {
+  padding: 0;
+  margin-top:20px;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: #787486;
+}
+
+.newCard {
+  background: #F5F5F5;
+  opacity: 0.5;
+  color: #5030E5;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  font-size: 25px;
+}
+
+.titleContainer {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .boardContainer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .listContainer {
+    width: 90%;
+    margin: 10px 0;
+  }
+  
+  .cardContainer {
+    margin: 10px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+  
+  .newCard {
+    font-size: 20px;
+  }
+  
+  .titleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 16px;
   }
 }
